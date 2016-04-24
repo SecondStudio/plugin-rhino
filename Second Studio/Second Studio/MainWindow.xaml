@@ -1,0 +1,43 @@
+﻿<Window x:Class="Second_Studio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Second Studio" Height="400" Width="520"
+        Foreground="White" Background="#FF164967" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Welcome!" VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro"/>
+        <Button Content="Set Origin" HorizontalAlignment="Left" Margin="420,117,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF535353" Background="#FFF26921" FontFamily="DaxlinePro" Click="OriginClick"/>
+        <TextBox x:Name="OriginText" HorizontalAlignment="Left" Height="22" Margin="10,117,0,0" TextWrapping="Wrap" Text="{Binding Path=Origin, Mode=TwoWay}" VerticalAlignment="Top" Width="405" BorderBrush="#00ABADB3" Background="#FF535353" Foreground="White" FontFamily="DaxlinePro" TextAlignment="Center" IsReadOnly="True" />
+        <Button Content="Submit!" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="485" BorderBrush="#FF535353" Background="#FFF26921" FontFamily="DaxlinePro" Padding="1,1,1,4" Click="SubmitClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="Second Studio is your doorway between how you work now and how you will work in the future!" VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro" Width="485" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" Text="1. Set your project's origin." VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro" Width="485" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="2. Pick which virtual headset you will be using (if any)." VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro" Width="485" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="3. Select the field that best describes your work." VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro" Width="485" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,88,0,0" TextWrapping="Wrap" Text="4. Click submit to enter your Second Studio!" VerticalAlignment="Top" Foreground="White" FontFamily="DaxlinePro" Width="485" FontSize="10"/>
+        <Button Content="Set Spawn " HorizontalAlignment="Left" Margin="420,154,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF535353" Background="#FFF26921" FontFamily="DaxlinePro" Click="SpawnClick"/>
+        <TextBox x:Name="SpawnText" HorizontalAlignment="Left" Height="22" Margin="10,154,0,0" TextWrapping="Wrap" Text="{Binding Path=Spawn, Mode=TwoWay}" VerticalAlignment="Top" Width="405" BorderBrush="#00ABADB3" Background="#FF535353" Foreground="White" FontFamily="DaxlinePro" TextAlignment="Center" IsReadOnly="True" />
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,204,0,0" VerticalAlignment="Top" Width="224">
+            <RadioButton GroupName="vr" Content="Oculus DK1" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="Oculus DK2" HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="Cardboard" HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Virtual Reality:" VerticalAlignment="Top" FontFamily="DaxlinePro" Foreground="White"/>
+            <RadioButton GroupName="vr" Content="None" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="HTC Vive" HorizontalAlignment="Left" Margin="119,42,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="Morpheus" HorizontalAlignment="Left" Margin="119,62,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="Magic Leap" HorizontalAlignment="Left" Margin="119,82,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="vr" Content="Gear VR" HorizontalAlignment="Left" Margin="119,23,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" IsEnabled="False" Checked="RadioButton_Checked"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="239,204,0,0" VerticalAlignment="Top" Width="256">
+            <RadioButton GroupName="field" Content="Product" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Fashion" HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Urban" HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Content:" VerticalAlignment="Top" FontFamily="DaxlinePro" Foreground="White"/>
+            <RadioButton GroupName="field" Content="Architecture" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Film" HorizontalAlignment="Left" Margin="163,42,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Art" HorizontalAlignment="Left" Margin="163,62,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Simulation" HorizontalAlignment="Left" Margin="163,82,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+            <RadioButton GroupName="field" Content="Game" HorizontalAlignment="Left" Margin="163,23,0,0" VerticalAlignment="Top" FontFamily="DaxlinePro" FontSize="10" Foreground="White" Background="#FF535353" Checked="CheckBox_Checked"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
